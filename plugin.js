@@ -65,7 +65,7 @@
 			settings.onFinish = editor.getParam('wsc_popup_finish', function(){});
 			settings.onClose = editor.getParam('wsc_popup_close', function(){});
 
-			settings.wscCoreURL = settings.wscCorePath + 'wsc&customerid=' + settings.customerId + '&schema=' + settings.schemaIdentifier;
+			settings.wscCoreURL = settings.wscCorePath + 'wsc&schema=' + settings.schemaIdentifier;
 
 			for(var key in settings) {
 				if(settings[key] === '') {
@@ -121,6 +121,8 @@
 				settings.onFinish = function(mCtrl) {
 					// Set changed content back to editor
 					editor.setContent(mCtrl.value);
+					// since tinymce doesn't save snapeshot after setting content through its method 'setContent'
+					editor.save();
 
 					if(editor.wscDialogWindow) {
 						editor.wscDialogWindow.close();
@@ -189,7 +191,6 @@
 			var wscModalBg = document.getElementById('webspellchecker-modal-bg');
 			var wscResize = document.getElementById('webspellchecker-wsc_resize');
 			var wscCloseBtn = document.getElementById('webspellchecker-closeButton');
-
 
 			if(wscModalBg) tinyMCE.DOM.remove(wscModalBg);
 			if(wscResize) tinyMCE.DOM.remove(wscResize);

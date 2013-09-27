@@ -37,7 +37,6 @@
 			// basic settings
 			var settings = {};
 			settings.wscCorePath = window.WSCCorePath;
-			settings.customerId = editor.getParam('wsc_customerId', '');
 
 			settings.lang = editor.getParam('wsc_lang', that._getCurrentTinyMCEIntLang(editor));
 			settings.ctrl = editor.id;

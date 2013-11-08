@@ -130,7 +130,7 @@
 					if(typeof _onFinish === 'function') {
 						_onFinish(mCtrl);
 					}
-				}
+				};
 
 				settings.onCancel = function() {
 					if(editor.wscDialogWindow) {
@@ -140,7 +140,7 @@
 					if(typeof _onCancel === 'function') {
 						_onCancel();
 					}
-				}
+				};
 			}
 
 			// Set editors content to hidden control
@@ -172,8 +172,7 @@
 			}
 		},
 
-		_runInsideModalWindow: function(editor, settings) {
-			value = editor.wscDialogWindow;
+		_runInsideModalWindow: function(editor, settings, value) {
 			window.WSC.doSpell(settings);
 
 			// find elements
@@ -191,9 +190,15 @@
 			var wscResize = document.getElementById('webspellchecker-wsc_resize');
 			var wscCloseBtn = document.getElementById('webspellchecker-closeButton');
 
-			if(wscModalBg) tinyMCE.DOM.remove(wscModalBg);
-			if(wscResize) tinyMCE.DOM.remove(wscResize);
-			if(wscCloseBtn) tinyMCE.DOM.remove(wscCloseBtn);
+			if(wscModalBg) {
+				tinyMCE.DOM.remove(wscModalBg);
+			}
+			if(wscResize) {
+				tinyMCE.DOM.remove(wscResize);
+			}
+			if(wscCloseBtn) {
+				tinyMCE.DOM.remove(wscCloseBtn);
+			}
 		},
 
 		_resizeWSCWindow: function(editor, settings, value) {

@@ -151,6 +151,7 @@
 					window.DragHandler.attach = function() {};
 					window.DragHandler.updateWindowSize = function() {};
 					window.DragHandler.resetElement = function() {};
+					window.DragHandler.initView = function() {};
 				}
 				editor.wscDialogWindow = editor.windowManager.open({
 					title: settings.title,
@@ -182,7 +183,7 @@
 			editor.plugins.wsc._wscInfo.modalWindow = document.getElementById('webspellchecker-modal-window');
 			editor.plugins.wsc._wscInfo.modalWindowIframe = editor.plugins.wsc._wscInfo.modalWindow.children[0];
 			editor.plugins.wsc._wscInfo.contentArea = document.getElementById(value._id + '-body');
-			
+
 			// set wsc modal window inside of tinymce dialog
 			editor.plugins.wsc._wscInfo.contentArea.appendChild(editor.plugins.wsc._wscInfo.modalWindowWrapper);
 			// remove waste elements

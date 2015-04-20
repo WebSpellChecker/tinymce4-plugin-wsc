@@ -84,7 +84,7 @@
 			});
 
 			// Register spell check button
-			var wscBtnIcoPath = settings.wscCorePath + 'image&img=btn_wsc_tinymce';
+			var wscBtnIcoPath = editor.baseURI.source + '/plugins/wsc/img/btn_wsc_tinymce.gif';
 			editor.addButton('wsc', {
 				title : 'WSC_button_desc',
 				cmd: 'mceWSC',

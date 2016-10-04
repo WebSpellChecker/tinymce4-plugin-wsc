@@ -65,7 +65,7 @@
 			settings.onFinish = editor.getParam('wsc_popup_finish', function(){});
 			settings.onClose = editor.getParam('wsc_popup_close', function(){});
 
-			settings.wscCoreURL = settings.wscCorePath + 'wsc&schema=' + settings.schemaIdentifier + 'customerid=' + settings.customerId;
+			settings.wscCoreURL = settings.wscCorePath + 'wsc&schema=' + settings.schemaIdentifier + '&customerid=' + settings.customerId;
 
 			for(var key in settings) {
 				if(settings[key] === '') {

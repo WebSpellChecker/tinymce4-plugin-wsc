@@ -37,6 +37,7 @@
 			// basic settings
 			var settings = {};
 			settings.wscCorePath = window.WSCCorePath;
+			settings.customerId = editor.getParam('wsc_customerId', '');
 
 			settings.lang = editor.getParam('wsc_lang', that._getCurrentTinyMCEIntLang(editor));
 			settings.ctrl = editor.id;
@@ -64,7 +65,7 @@
 			settings.onFinish = editor.getParam('wsc_popup_finish', function(){});
 			settings.onClose = editor.getParam('wsc_popup_close', function(){});
 
-			settings.wscCoreURL = settings.wscCorePath + 'wsc&schema=' + settings.schemaIdentifier;
+			settings.wscCoreURL = settings.wscCorePath + 'wsc&schema=' + settings.schemaIdentifier + 'customerid=' + settings.customerId;
 
 			for(var key in settings) {
 				if(settings[key] === '') {

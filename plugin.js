@@ -182,7 +182,7 @@
 			editor.plugins.wsc._wscInfo.modalWindowWrapper = document.getElementById('webspellchecker-modal-window-wrapper');
 			editor.plugins.wsc._wscInfo.modalWindowHeader = document.getElementById('webspellchecker-modal-header');
 			editor.plugins.wsc._wscInfo.modalWindow = document.getElementById('webspellchecker-modal-window');
-			editor.plugins.wsc._wscInfo.modalWindowIframe = editor.plugins.wsc._wscInfo.modalWindow.children[0];
+			editor.plugins.wsc._wscInfo.modalWindowIframe = editor.plugins.wsc._wscInfo.modalWindow.children[0] ||  editor.plugins.wsc._wscInfo.modalWindow;
 			editor.plugins.wsc._wscInfo.contentArea = document.getElementById(value._id + '-body');
 
 			// set wsc modal window inside of tinymce dialog

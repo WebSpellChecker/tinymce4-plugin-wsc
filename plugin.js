@@ -87,7 +87,7 @@
 			// Register spell check button
 			var wscBtnIcoPath = editor.baseURI.source + '/plugins/wsc/img/btn_wsc_tinymce.gif';
 			editor.addButton('wsc', {
-				title : 'WSC_button_desc',
+				title : 'WebSpellChecker',
 				cmd: 'mceWSC',
 				image: wscBtnIcoPath
 			});
